@@ -1,0 +1,12 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: swift build -v
+      - name: Run tests
+        run: swift test -v
